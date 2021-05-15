@@ -1,0 +1,71 @@
+
+
+.input-container {
+    display: flex;
+    justify-content: center;
+
+    
+
+    input {
+        border: none;
+        border-radius: 10px;
+        padding: 0.7rem;
+        width: 40vw;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            outline: none;
+        }
+
+        @include breakpoint(small) {
+         width: 90%;  
+         margin-left: 5%;
+         border-radius: 10px 0 0 10px; 
+         padding: 1rem;
+            }
+    }
+
+    .button {
+        padding: 1rem 1.3rem;
+        background-color: black;
+        outline: none;
+        border: none;
+        position: relative;
+        left: -10px;
+        z-index: 1;
+        cursor: pointer;
+        border-radius: 0 10px 10px 0;
+
+        &:hover {
+            background-color: $dark-gray;
+        }
+
+        @include breakpoint(small) {
+            padding: 1rem 1.5rem;
+            left: 0;
+            margin-right: 5%;
+        }
+        
+        &:after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            position: absolute;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            left: -3px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            border-top: 3px solid white;
+            border-right: 3px solid white;
+            transform: rotate(45deg);
+
+            
+        }
+    }
+}

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// COLORS
+$dark-gray: hsl(0, 0%, 17%);
+$gray: hsl(0, 0%, 59%);
+
+// BRREAKPOINTS
+$breakpoints: (
+    'small'  : 995px,
+  );
+
+// RESPONSIVE
+@mixin breakpoint($size){
+  @media (max-width: map-get($breakpoints, $size)){
+    @content;
+  }
+}
+
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+$font: 'Rubik', sans-serif; 
+ 
+.title {
+  text-align: center;
+  color: white;
+  font-family: $font;
+  font-weight: 500;
+  padding: 1rem;
+
+  @include breakpoint(small) {
+    font-size: 1.5rem;
+  }
+}
+.bg-top {
+  background-image: url(./images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 12rem;
+
+  text-align: center;
+
+  @include breakpoint(small) {
+    height: 18rem;
+}
+}
+
+
+
+.test {
+  text-align: center;
+  
+}
+.bg-bottom {
+  position: relative;
+  z-index: 0;
+  background-color: gray;
+  height: 80.5vh;
+  width: 100vw;
+
+  @include breakpoint(small) {
+    height: 70.5vh;
+}
+}
+
+
+.map__container {
+  width: 100vw;
+  height: 100%;
+}
+.leaflet-container {
+  width: 100vw;
+  height: 100%;
+}
+
+@import "utilities/input";
+@import "utilities/dashboard";
