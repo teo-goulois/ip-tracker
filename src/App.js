@@ -10,7 +10,7 @@ function App() {
   
   const [ip, setIp] = useState(["retrieving data", "retrieving data", "retrieving data", 'retrieving data']);
   const [ location, setLocation ] = useState(['lat', 'lng'])
-
+// redeploy
   return (
 
     
