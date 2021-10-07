@@ -27,7 +27,7 @@ const Input = (props) => {
             })
             setConnect(true)
         }
-    })
+    }, [connect])
 
 
     const logValue = () => {

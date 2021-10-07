@@ -1,6 +1,6 @@
 import './App.scss';
 import React, {useState} from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import Input from './screens/input'
 import Leaflet from './screens/leaflet'
